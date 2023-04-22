@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Encriptador de Texto</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"><!----con esta etiqueta agregamos un icono a lado del titulo de la ventana en el navegador-->
     <link rel="stylesheet" href="reset.css"> <!---- archivo que reinicia las propiedades de la pagina-->
     <link rel="stylesheet" href="style.css"> <!---- ubicación de los códigos css-->
     
@@ -24,19 +25,22 @@
             </div>
             <div class="botones">
                 <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
-                <input type="button" value="Desencriptar" class="btn-desencriptar"  onclick="Desencriptar()">
-                
+                <input type="button" value="Desencriptar" class="btn-desencriptar"  onclick="desencriptar()">
+                <input type="button" value="Copiar Texto" class="btn-copiar"  onclick="copiar()">
             </div>
         </div>
-        <div class="ecriptado">
-            <img src="" alt="" id="dibujo">
+        <div class="encriptado">
+            <img src="img/Muñeco.png" alt="" id="dibujo">
             <div class="mensaje-encriptado" id="mensaje-encriptado">
                 <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
                 <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
+                <!-- <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea> -->
             </div>
         </div>
     </div>
+    <div id="miAlerta" class="alerta">
+        <span id="textoAlerta"></span>
+      </div>
 </body>
 <script src="index.js"></script> <!---- ubicación de los códigos js-->
 

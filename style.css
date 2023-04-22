@@ -1,0 +1,339 @@
+.container{
+
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/fondo_pagina.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.texto{
+
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 12%;
+    top: 15%;
+    border: none;
+    border-radius: 10px ;
+    font-family: "Inter";
+    font-size: normal;
+    font-weight: 400;
+    font-size: 32px;
+    color: white;
+    line-height: 150%;
+    background-color: #06420188;
+}
+
+::placeholder{
+     
+    color: rgb(172, 240, 214);
+    
+}
+
+
+.terminos{
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 8px;
+        position: absolute;
+        width: 80%;
+        left: 12%;
+        top: 80%;
+}
+
+.terminos p{
+
+    color: rgb(172, 240, 214);
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+
+.botones{
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 53%;
+    left: 12%;
+    top: 82%;
+}
+
+
+
+/* Define los estilos del botón de encriptación */
+.btn-encriptar{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    margin: 1%;
+    gap: 8px;
+    width: 25%;
+    background-color: rgba(0, 255, 55, 0.363);
+    border-radius: 24px;
+    border: none;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color:white;    
+}
+
+/* Agrega una animación al botón cuando se presiona */
+.btn-encriptar:active {
+    animation: explosion 0.1s ease forwards;
+}
+
+
+.btn-encriptar:hover{
+
+    box-shadow: 0 0 10px  rgba(0, 255, 55, 0.363), 0 0 40px  rgba(0, 255, 55, 0.363), 0 0 80px  rgba(0, 255, 55, 0.363);
+    transition-delay: 0.1s;
+
+}
+
+/* Define los estilos del botón de desencriptación */
+.btn-desencriptar{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    margin: 1%;
+    gap: 8px;
+    width: 25%;
+    background-color: rgba(0, 255, 234, 0.39);
+    border-radius: 24px;
+    border: none;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: white;
+}
+
+/* Agrega una animación al botón cuando se presiona */
+.btn-desencriptar:active {
+    animation: explosion 0.1s ease forwards;
+}
+
+
+.btn-desencriptar:hover{
+
+    box-shadow: 0 0 10px rgba(0, 255, 234, 0.39), 0 0 40px rgba(0, 255, 234, 0.39), 0 0 80px rgba(0, 255, 234, 0.39);
+    transition-delay: 0.1s;
+
+}
+
+.btn-copiar{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    margin: 1%;
+    gap: 8px;
+    width: 25%;
+    background-color: rgba(255, 153, 0, 0.39);
+    border-radius: 24px;
+    border: none;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: white;
+}
+
+/* Agrega una animación al botón cuando se presiona */
+.btn-copiar:active {
+    animation: explosion 0.1s ease forwards;
+}
+
+
+.btn-copiar:hover{
+
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.39), 0 0 40px rgba(255, 0, 0, 0.39), 0 0 80px rgba(255, 0, 0, 0.39);
+    transition-delay: 0.1s;
+
+} /* Iniciador de efecto explosion */
+@keyframes explosion {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.btn-encriptar:active, .btn-desencriptar:active, .btn-copiar:active {
+    animation: explosion 0.3s ease forwards;
+}
+
+
+.encriptado{
+
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 5%;
+    background: rgba(0, 217, 255, 0.158);
+    border-radius: 32px;
+}
+
+.mensaje-encriptado{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    text-align: center;
+}
+
+.mensaje-encriptado h2{
+
+    width: 60%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: rgb(172, 240, 240);
+
+
+}
+
+.mensaje-encriptado p{
+
+    width: 80%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: rgb(172, 240, 214);
+
+}
+
+.encriptado #dibujo{
+
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 15%;
+
+}
+
+.alerta {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #f4433683;
+    color: white;
+    padding: 8px 16px;
+    z-index: 9999;
+    transition: top 0.5s;
+    border-radius: 12px;
+  }
+  
+  .alerta.oculto {
+    top: -60px;
+  }
+
+/*diseño responsivo*/
+
+@media screen and (max-width: 57.5em) {
+
+        .container{
+
+            display: flex;
+            flex-direction: row;
+        }
+        .encriptar{
+
+            width: 100%;
+
+        }
+        .texto{
+
+            width: 80%;
+            height: 60%;
+            left: 10%;
+            top: 5%;
+        }
+        .terminos{
+
+            width: 80%;
+            left: 10%;
+            top: 67%;
+
+        }
+        .terminos p{
+
+            font-size: 16px;
+
+        }
+        .botones{
+
+            width: 80%;
+            left: 10%;
+            top: 70%;
+        }
+        .btn-encriptar, .btn-desencriptar , .btn-copiar{
+
+            width: 48%;
+            border-radius: 16px;
+        }
+        .encriptado{
+
+            width: 80%;
+            height: 15%;
+            left: 10%;
+            top: 80%;
+        }
+        #titulo-mensaje{
+
+            font-size: 18px;
+        }
+        #parrafo{
+
+            font-size: 12px;
+        }
+        .mensaje-encriptado{
+
+            width: 100%;
+            top: 5%;
+        }
+        .encriptado img{
+
+            top: 0;
+            display: none;
+            visibility: hidden;
+
+        }
+
+       
+
+}
