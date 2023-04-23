@@ -35,7 +35,7 @@ function desencriptar(){
 
     let textoCifrado = texto
                         .replace(/enter/gi, "e")
-                        .replace(/imes/gi, "")
+                        .replace(/imes/gi, "i")
                         .replace(/ai/gi, "a")
                         .replace(/ober/gi, "o")
                         .replace(/ufat/gi, "u");
