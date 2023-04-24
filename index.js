@@ -71,14 +71,16 @@ if (elemento.value === "") {
 }
 
 
+
 function mostrarAlerta(mensaje) {
-    const alerta = document.getElementById('miAlerta');
-    const textoAlerta = document.getElementById('textoAlerta');
-    
-    textoAlerta.innerText = mensaje;
-    alerta.classList.remove('oculto');
-    
-    setTimeout(() => {
-      alerta.classList.add('oculto');
-    }, 3000); // tiempo de duración de la alerta
-  }
+const alerta = document.getElementById('miAlerta');
+const textoAlerta = document.getElementById('textoAlerta');
+
+textoAlerta.innerText = mensaje;
+alerta.classList.remove('oculto');
+alerta.classList.remove('oculto'); // remover clase oculto por defecto
+
+setTimeout(() => {
+alerta.classList.add('oculto');
+}, 3000); // tiempo de duración de la alerta
+}

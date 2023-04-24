@@ -256,11 +256,12 @@
     z-index: 9999;
     transition: top 0.5s;
     border-radius: 12px;
-  }
-  
-  .alerta.oculto {
+    }
+    
+    .alerta.oculto {
     top: -60px;
-  }
+    display: none; /* agregar propiedad display none para ocultar la alerta */
+    }
 
 /*diseño responsivo*/
 
