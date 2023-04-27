@@ -1,3 +1,17 @@
+function mostrarAlerta(mensaje) {
+const alerta = document.getElementById('miAlerta');
+const textoAlerta = document.getElementById('textoAlerta');
+
+textoAlerta.innerText = mensaje;
+alerta.classList.remove('oculto');
+alerta.classList.remove('oculto'); // remover clase oculto por defecto
+
+setTimeout(() => {
+alerta.classList.add('oculto');
+}, 3000); // tiempo de duración de la alerta
+}
+
+
 function encriptar(){
 
     let texto = document.getElementById("texto").value;
@@ -70,17 +84,14 @@ if (elemento.value === "") {
 
 }
 
+const textarea = document.querySelector('textarea');
 
+textarea.addEventListener('input', function() {
+  let lowercaseValue = this.value.toLowerCase();
+  lowercaseValue = lowercaseValue.replace(/[^a-z\s , .]/g, '');
+  if (this.value !== lowercaseValue) {
+    mostrarAlerta('Solo se permiten letras minúsculas y espacios');
+  }
+  this.value = lowercaseValue;
+});
 
-function mostrarAlerta(mensaje) {
-const alerta = document.getElementById('miAlerta');
-const textoAlerta = document.getElementById('textoAlerta');
-
-textoAlerta.innerText = mensaje;
-alerta.classList.remove('oculto');
-alerta.classList.remove('oculto'); // remover clase oculto por defecto
-
-setTimeout(() => {
-alerta.classList.add('oculto');
-}, 3000); // tiempo de duración de la alerta
-}
